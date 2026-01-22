@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
 describe('e2e-tls', () => {
     it('verify', () => {
         expect(process.env.SECRET).toBe("SUPERSECRET");

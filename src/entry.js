@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
 const core = require('@actions/core');
 const { exportSecrets } = require('./action');
 

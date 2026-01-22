@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
 const jsonata = require("jsonata");
 const { WILDCARD, WILDCARD_UPPERCASE} = require("./constants");
 const { normalizeOutputKey } = require("./utils");

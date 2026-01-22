@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
 const privateRsaKey = `
 -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEArcch89X6VuWj/CQtVfaCXUl0Pcv8IJRgICN8X+3zFNrbiTdh

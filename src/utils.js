@@ -1,4 +1,9 @@
 /**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
+/**
  * Replaces any dot chars to __ and removes non-ascii charts
  * @param {string} dataKey
  * @param {boolean=} isEnvVar

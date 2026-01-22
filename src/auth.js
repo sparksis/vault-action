@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
 // @ts-check
 const core = require('@actions/core');
 const rsasign = require('jsrsasign');

@@ -1,3 +1,6 @@
+# Copyright IBM Corp. 2019, 2025
+# SPDX-License-Identifier: MIT
+
 ui = false
 disable_mlock = true
 

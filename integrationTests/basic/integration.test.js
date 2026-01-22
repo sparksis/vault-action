@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2019, 2025
+ * SPDX-License-Identifier: MIT
+ */
+
 jest.mock('@actions/core');
 jest.mock('@actions/core/lib/command');
 const core = require('@actions/core');
