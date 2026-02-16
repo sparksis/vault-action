@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vault-action
+  description: "The Vault GitHub Action is a read-only helper action designed to securely pull secrets from HashiCorp Vault into GitHub Actions workflows, supporting various authentication methods and key syntax for flexible secret retrieval."
+  annotations:
+    github.com/project-slug: sparksis/vault-action
+spec:
+  type: service
+  lifecycle: experimental
+  owner: sparksis
