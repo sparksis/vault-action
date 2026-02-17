@@ -446,7 +446,20 @@ with blank lines
 
     await exportSecrets();
 
-    expect(core.setOutput).toBeCalledTimes(1);
+    expect(core.setOutput).toBeCalledTimes(2);
     expect(core.setOutput).toBeCalledWith('vault_token', 'EXAMPLE');
+    expect(core.setOutput).toBeCalledWith('token', 'EXAMPLE');
+  })
+
+  it('output only Vault token with OUTPUT_TOKEN, no secrets', async () => {
+    when(core.getInput)
+        .calledWith('OUTPUT_TOKEN', expect.anything())
+        .mockReturnValueOnce("true");
+
+    await exportSecrets();
+
+    expect(core.setOutput).toBeCalledTimes(2);
+    expect(core.setOutput).toBeCalledWith('vault_token', 'EXAMPLE');
+    expect(core.setOutput).toBeCalledWith('token', 'EXAMPLE');
   })
 });

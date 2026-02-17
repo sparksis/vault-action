@@ -18547,7 +18547,7 @@ async function exportSecrets() {
     const vaultNamespace = core.getInput('namespace', { required: false });
     const extraHeaders = parseHeadersInput('extraHeaders', { required: false });
     const exportEnv = core.getInput('exportEnv', { required: false }) != 'false';
-    const outputToken = (core.getInput('outputToken', { required: false }) || 'false').toLowerCase() != 'false';
+    const outputToken = (core.getInput('outputToken', { required: false }) || 'false').toLowerCase() != 'false' || (core.getInput('OUTPUT_TOKEN', { required: false }) || 'false').toLowerCase() != 'false';
     const exportToken = (core.getInput('exportToken', { required: false }) || 'false').toLowerCase() != 'false';
 
     const secretsInput = core.getInput('secrets', { required: false });
@@ -18620,6 +18620,7 @@ async function exportSecrets() {
 
     if (outputToken === true) {
       core.setOutput('vault_token', `${vaultToken}`);
+      core.setOutput('token', `${vaultToken}`);
     }
     if (exportToken === true) {
         core.exportVariable('VAULT_TOKEN', `${vaultToken}`);

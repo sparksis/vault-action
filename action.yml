@@ -66,6 +66,10 @@ inputs:
     description: 'Whether or not to set the `vault_token` output to contain the Vault token after authentication.'
     default: 'false'
     required: false
+  OUTPUT_TOKEN:
+    description: 'Whether or not to set the `token` output to contain the Vault token after authentication.'
+    default: 'false'
+    required: false
   caCertificate:
     description: 'Base64 encoded CA certificate the server certificate was signed with. Defaults to CAs provided by Mozilla.'
     required: false
@@ -102,6 +106,11 @@ inputs:
 runs:
   using: 'node20'
   main: 'dist/index.js'
+outputs:
+  vault_token:
+    description: 'The Vault token after authentication.'
+  token:
+    description: 'The Vault token after authentication.'
 branding:
   icon: 'unlock'
   color: 'gray-dark'
